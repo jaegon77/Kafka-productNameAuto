@@ -28,7 +28,7 @@ public class ProductService {
     private final CategoryRepository categoryRepository;
     private final KafkaTemplate<String, String> kafkaTemplate;
     private final ObjectMapper objectMapper = new ObjectMapper().registerModule(new JavaTimeModule()).configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-    private final static String PRODUCT_INSERT_TOPIC_NAME = "pd.insert.v1";
+    private final static String PRODUCT_INSERT_TOPIC_NAME = "pd.nm.insert.v1";
     private final static String PRODUCT_NAME_UPDATE_TOPIC_NAME = "pd.nm.update.v1";
 
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.REPEATABLE_READ)
